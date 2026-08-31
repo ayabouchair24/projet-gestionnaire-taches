@@ -91,29 +91,29 @@ Le fichier .github/workflows/ci.yml automatise :
 
     L'exécution automatique des tests d'intégration à chaque PR soumise sur main.
 
-Conteneurisation Docker (Bonus)
+## Conteneurisation Docker (Bonus)
 
 Un fichier docker-compose.yml est disponible à la racine du projet :
 Bash
-
+```
 docker-compose up --build
-
-Instructions d'Exécution Locale
+```
+### Instructions d'Exécution Locale
 Backend
 Bash
-
+```
 cd backend
 npm install
 npm run dev
-
+```
 Frontend
 Bash
-
+```
 cd frontend
 npm install
 npm start
-
-Identifiants de Test
+```
+## Identifiants de Test
 
     URL Frontend : http://localhost:3000 (ou port Vite/React attribué)
 
