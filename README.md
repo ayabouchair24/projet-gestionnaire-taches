@@ -113,10 +113,29 @@ cd frontend
 npm install
 npm start
 ```
-## Identifiants de Test
 
-    URL Frontend : http://localhost:3000 (ou port Vite/React attribué)
+---
 
-    Email : admin@test.com
+## Points Bonus & Innovation
 
-    Mot de passe : password
+### 1. Conteneurisation Docker
+L'application a été entièrement conteneurisée pour garantir un environnement d'exécution uniforme entre le développement et la production :
+- **`docker-compose.yml` :** Orchestration en une seule commande du serveur Express (`backend`) et de l'interface React (`frontend`).
+- **Isolation :** Gestion autonome des ports et des variables d'environnement.
+
+---
+
+### 2. Perspectives d'évolution 
+
+Bien que le temps imparti ait été concentré sur la mise en place de la chaîne DevOps, de la CI/CD et des tests d'API, voici les fonctionnalités prévues pour les prochaines itérations :
+
+#### Améliorations UX/UI
+- **Tableau Kanban interactif :** Glisser-déposer (Drag & Drop) des cartes de tâches entre les colonnes (*À faire*, *En cours*, *Terminé*).
+- **Mode Sombre (Dark Mode) :** Prise en compte des préférences système de l'utilisateur.
+
+#### Fonctionnalités Métier & Monitoring
+- **Système de Notifications :** Alerte en temps réel lors de l'assignation d'une tâche ou de l'approche d'une date limite.
+- **Tableau de bord Analytics :** Métriques visuelles sur la productivité de l'équipe et le taux de résolution des tickets.
+- **Monitoring CI/CD :** Intégration d'outils de suivi comme Prometheus/Grafana pour surveiller le taux de réussite des builds et les performances serveur.
+
+   
