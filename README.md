@@ -47,7 +47,8 @@ Assia a configuré les tests serveur backend pour valider les endpoints d'authen
 
         POST /api/auth/login (connexion valide, mot de passe erroné, utilisateur inexistant).
 
-  ![Tests Backend Réussis](docs/passAssia.png)
+  ![Tests Backend Réussis](passAssia.png)
+  
 
 Résultat final des tests : 4 passed, 4 total.
 ### Étape 2 : Configuration du Workflow et CI/CD (Aya)
