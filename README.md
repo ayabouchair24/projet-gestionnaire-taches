@@ -33,7 +33,7 @@ projet-gestionnaire-taches/
 
 ```
 ## Historique d'Exécution et Analyse du Travail
-### Étape 1 : Implémentation et Validation des Tests (Assia)
+### Étape 1 : Implémentation et Validation des Tests (Assia) cf: tests/README.md
 
 Assia a configuré les tests serveur backend pour valider les endpoints d'authentification et de santé de l'API :
 
