@@ -47,8 +47,8 @@ Assia a configuré les tests serveur backend pour valider les endpoints d'authen
 
         POST /api/auth/login (connexion valide, mot de passe erroné, utilisateur inexistant).
 
-  ![Tests Backend Réussis](passAssia.png)
- ![Tests Backend Réussi](Tests.png)
+  ![Tests Backend Réussis](docs/passAssia.png)
+ ![Tests Backend Réussi](docs/Tests.png)
 
 ### Étape 2 : Configuration du Workflow et CI/CD (Aya)
 
@@ -64,7 +64,7 @@ Aya a mis en place la structure globale du dépôt et l'automatisation sur GitHu
 
     Intégration de la conteneurisation docker-compose.yml et fusion (merge) sur la branche main.
 
-<img src="Docker Screenshot.png" alt="Lancement Docker Compose" />
+<img src="docs/Docker Screenshot.png" alt="Lancement Docker Compose" />
 
 Difficultés Rencontrées et Solutions Apportées
 
