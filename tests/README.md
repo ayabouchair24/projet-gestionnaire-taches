@@ -1,4 +1,4 @@
-Stratégie de Tests — Gestionnaire de Tâches
+Stratégie de Tests Gestionnaire de Tâches
 
 
 
