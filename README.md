@@ -62,6 +62,8 @@ Aya a mis en place la structure globale du dépôt et l'automatisation sur GitHu
 
     Intégration de la conteneurisation docker-compose.yml et fusion (merge) sur la branche main.
 
+<img src="Docker Screenshot.png" alt="Lancement Docker Compose" />
+
 Difficultés Rencontrées et Solutions Apportées
 
     Erreur touch non reconnue sous Windows CMD :
