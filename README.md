@@ -49,8 +49,6 @@ Assia a configuré les tests serveur backend pour valider les endpoints d'authen
 
   ![Tests Backend Réussis](passAssia.png)
   
-
-Résultat final des tests : 4 passed, 4 total.
 ### Étape 2 : Configuration du Workflow et CI/CD (Aya)
 
 Aya a mis en place la structure globale du dépôt et l'automatisation sur GitHub :
