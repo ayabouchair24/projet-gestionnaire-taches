@@ -1,96 +1,64 @@
-Stratégie de Tests Gestionnaire de Tâches
+# Tests automatisés
 
+Cette partie du projet concerne les tests automatisés de l'API backend.
 
+##  Technologies
 
-Ce document décrit l'approche de test mise en place pour le projet, les outils choisis, et l'organisation du dossier tests/.
+* **Jest** : framework de tests
+* **Supertest** : tests des endpoints HTTP
 
+## Structure
 
+```text
+backend/
+├── server.js
+└── tests/
+    └── server.test.js
+```
 
-Objectifs
+## Lancer les tests
 
-Garantir la fiabilité des fonctionnalités CRUD (création, modification, suppression, attribution de tâches).
+Depuis le dossier `backend` :
 
-Détecter les régressions avant chaque merge grâce à l'intégration continue (GitHub Actions).
+```bash
+npm install
+npm test
+```
 
-Maintenir une qualité de code homogène sur l'ensemble du projet (ESLint).
+Pour générer la couverture :
 
-Stack de test
-
-Type de test	Outil	Statut
-
-Analyse de code	ESLint	Obligatoire
-
-Tests E2E	Selenium + Jest	Obligatoire
-
-Couverture de code	Jest --coverage	Obligatoire
-
-Tests unitaires	Jest	Bonus
-
-Tests d'intégration	Jest + Supertest	Bonus
-
-Organisation du dossier
-
-tests/
-
-├── unit/          # Tests de fonctions et modules isolés (bonus)
-
-├── integration/   # Tests des routes API avec Supertest (bonus)
-
-├── e2e/           # Scénarios utilisateurs complets avec Selenium (obligatoire)
-
-└── README.md      # Ce document
-
-Convention de nommage
-
-Fichiers de test : \*.test.js (unitaire/intégration) et \*.selenium.test.js (E2E).
-
-Un fichier de test par module/route testé, nommé sur le même modèle que le fichier source (ex. tache.js → tache.test.js).
-
-Comment lancer les tests
-
-bash
-
-\# Analyse de code
-
-npm run lint
-
-
-
-\# Tests unitaires + intégration, avec couverture
-
+```bash
 npm run test:coverage
+```
 
+## Tests réalisés
 
+Les tests couvrent :
 
-\# Tests E2E (nécessite que le backend et le frontend tournent en local)
+* `GET /health`
+* Authentification avec identifiants valides/invalides
+* `GET /api/tasks`
+* `GET /api/tasks/:id`
+* `POST /api/tasks`
+* `PUT /api/tasks/:id`
+* `DELETE /api/tasks/:id`
+* Gestion des erreurs `400`, `401` et `404`
 
-npm run test:e2e
+Les endpoints protégés sont testés avec un token JWT obtenu lors de la connexion.
 
-Intégration continue
+## Résultats
 
+La suite actuelle contient **13 tests automatisés** couvrant les principales fonctionnalités de l'API.
 
+```bash
+npm test
+```
 
-Chaque Pull Request déclenche automatiquement, via GitHub Actions (.github/workflows/tests.yml) :
+Les tests doivent être exécutés avant chaque Pull Request afin de détecter les régressions.
 
+## À venir
 
-
-L'analyse de code avec ESLint.
-
-Les tests unitaires et d'intégration avec rapport de couverture.
-
-Les tests E2E Selenium, une fois le job précédent validé.
-
-
-
-Une PR ne peut être mergée que si l'ensemble de ces vérifications passe (règle de protection de branche sur main).
-
-
-
-État d'avancement
-
-
-
-
-
-
-
+* Tests frontend avec Vitest / React Testing Library
+* Tests E2E avec Selenium
+* Intégration des tests dans GitHub Actions
+* Suivi de la couverture de code
