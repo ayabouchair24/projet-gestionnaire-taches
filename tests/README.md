@@ -70,6 +70,10 @@ Scénarios testés :
 
 ## Tests E2E
 
+<img src="docs/Capture d'écran 2026-08-31 163544.png" alt="Lancement Docker Compose" />
+<img src="docs/Capture d'écran 2026-08-31 163830.png" alt="Lancement Docker Compose" />
+<img src="docs/Capture d'écran 2026-08-31 167.png" alt="Lancement Docker Compose" />
+
 Les tests E2E utilisent Selenium afin de simuler les actions d'un utilisateur
 dans le navigateur.
 
