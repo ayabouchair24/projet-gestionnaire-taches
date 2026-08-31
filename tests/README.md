@@ -56,9 +56,25 @@ npm test
 
 Les tests doivent être exécutés avant chaque Pull Request afin de détecter les régressions.
 
-## À venir
+## Tests d'intégration
 
-* Tests frontend avec Vitest / React Testing Library
-* Tests E2E avec Selenium
-* Intégration des tests dans GitHub Actions
-* Suivi de la couverture de code
+Les tests d'intégration vérifient le fonctionnement de plusieurs opérations
+enchaînées de l'API.
+
+Scénarios testés :
+
+- Authentification et récupération du JWT
+- Création puis récupération d'une tâche
+- Modification puis vérification d'une tâche
+- Suppression puis vérification de la suppression
+
+## Tests E2E
+
+Les tests E2E utilisent Selenium afin de simuler les actions d'un utilisateur
+dans le navigateur.
+
+Scénario actuel :
+
+- Ouverture de l'application
+- Connexion avec un utilisateur valide
+- Vérification de la redirection vers le dashboard
